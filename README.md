@@ -1,4 +1,5 @@
 # xobdox
+![Photo](./images/photo.jpeg "xobdox photo")
 xobdox is a 40%(~ish) split wireless keyboard with a single PCB
 design for both halves, featuring side buttons, encoders and configurable
 battery options, swappable low profile switches, and powered by ZMK firmware.
@@ -32,7 +33,7 @@ can be used at the same time since they share the same GPIO pins.
 ENC1 supports installing a knob up to 16mm diameter and ENC2 up to 25mm
 respectively.
 ENC2 also supports encoders with push button (e.g. EC11)
-![Encoder Config](./render/enc_config.gif "Encoder Config")
+![Encoder Config](./images/enc_config.gif "Encoder Config")
 ### Battery
 Battery could be mounted on either side of the board.
 
@@ -41,20 +42,20 @@ If mounted on top, an idea size would be 25mm * 35mm * 50mm, such as a 502535 ce
 
 If mounted on bottom, an alternative form factor of 18350 can be used, which also
 dubbed as the keyboard tilt support
-![Battery Config](./render/bat_config.gif "Battery Config")
+![Battery Config](./images/bat_config.gif "Battery Config")
 
 ### Encoder + Battery
 Since there are location conflict between some of the encoder and battery
 options, not all combinations of encoder and battery configs are feasible. This
 gif shows all feasible ones
-![Combo Config](./render/combo_config.gif "Combo Config")
+![Combo Config](./images/combo_config.gif "Combo Config")
 
 ### Key caps
 Some key caps can use 1.25u/1.5u key caps in addition to the standard 1u size. Those
 are located on the edge columns and the last row.
 The following gif demonstrated some possible key caps configurations (not
 exhaustive)
-![Keycaps Config](./render/keycap_config.gif "Keycap Config")
+![Keycaps Config](./images/keycap_config.gif "Keycap Config")
 
 *Note1*: 1.5u option only available to the switches on the most right/left column
 on row 2 and row 3.
@@ -88,3 +89,12 @@ Estimated battery life (in months)
 |1  |PKCELL LP502535\* |Battery        |
 
 \* Depends on configuration options, different part can be chosen.
+
+## Future Work
+This project is a little rushed to make it in time for SeeedStudio Mechanical Keyboard Design
+Contest[(project
+post)](https://www.hackster.io/seanqinxiao/xobdox-a-40-ish-split-wireless-keyboard-f7e3a8)
+After I gerbered out I realized it shouldn't be too hard to
+make the switch footprint compatible for both Choc and MX switches, which would
+(hopefully) make this board more useful. Therefore I
+am updating the design. And when that's done I will post it here.
