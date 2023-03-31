@@ -1,67 +1,36 @@
 # xobdox
 ![Photo](./images/photo.jpeg "xobdox photo")
 xobdox is a 40%(~ish) split wireless keyboard with a single PCB
-design for both halves, featuring side buttons, encoders and configurable
-battery options, swappable low profile switches, and powered by ZMK firmware.
+design for both halves, featuring joystick, side button, encoder and
+configurability options, powered by [ZMK](zmk.dev).
 
 ## Features
-* Reversible PCB for left and right halves
-* 44/46/48 total switches
-    * 44 mechanical switches
-    * 2 optional side push button (one on each side by the thumb)
-    * 2 optional encoder switch (if encoder installed at ENC2 location)
+* Reversible PCB for both left and right halves
+* 44/46/48 total switches/buttons
+    * 44 mechanical switches, Cherry MX or Kailh low profile compatible, hot swappable
+    * 2 optional side push buttons (one on each side)
+    * 2 optional encoder push-down buttons (ENC2 only)
+* PS2 style joystick
+    * Used for mouse cursor movement emulation
+    * Or as a joystick input device
 * Flexible configurations
-    * 2 encoder locations
-    * Top mount lipo battery or bottom mount 18350
+    * Choose to install either an encoder or a joystick on each side
+    * Encoder can be installed at ENC1 or ENC2, joystick uses ENC2 only
     * 1u or 1.25u key caps on *some* keys
 
 Other features are quite common in all the other DIY keyboards you can find out
 there:
-* Wireless (BLE) or Wired (USB)
-* Ortho-linear (slightly modified) layout
-* Hot swappable low profile switches (may add standard MX compatible switch support in the
-  next rev)
-* Encoders
-* Power switch
+* Wireless (BLE) or Wired (USB) transport
+* Ortho-linear (slightly modified and angled) layout
+* Hot swappable switches
+* Main power switch
 
-Sorry, no RGB/Glow/Backlight/Display support (yet).
+No RGB/Glow/Backlight/Display support (yet).
 
-## Config Options
-### Encoder
-One of two locations can be used to install an encoder, though not both of them
-can be used at the same time since they share the same GPIO pins.
-ENC1 supports installing a knob up to 16mm diameter and ENC2 up to 25mm
-respectively.
-ENC2 also supports encoders with push button (e.g. EC11)
-![Encoder Config](./images/enc_config.gif "Encoder Config")
-### Battery
-Battery could be mounted on either side of the board.
-
-If mounted on top, an idea size would be 25mm * 35mm * 50mm, such as a 502535 cell
-[here](https://www.sparkfun.com/products/13851)
-
-If mounted on bottom, an alternative form factor of 18350 can be used, which also
-dubbed as the keyboard tilt support
-![Battery Config](./images/bat_config.gif "Battery Config")
-
-### Encoder + Battery
-Since there are location conflict between some of the encoder and battery
-options, not all combinations of encoder and battery configs are feasible. This
-gif shows all feasible ones
-![Combo Config](./images/combo_config.gif "Combo Config")
-
-### Key caps
-Some key caps can use 1.25u/1.5u key caps in addition to the standard 1u size. Those
-are located on the edge columns and the last row.
-The following gif demonstrated some possible key caps configurations (not
-exhaustive)
-![Keycaps Config](./images/keycap_config.gif "Keycap Config")
-
-*Note1*: 1.5u option only available to the switches on the most right/left column
-on row 2 and row 3.
-
-*Note2*: not all key caps on the last row can be 1.25u, specifically, there shall
-not be any consecutive 1.25u key caps.
+## Gallery
+* Some [keyboards](docs/gallery.md) I have built
+* [Video](https://youtu.be/KlP1d-ixVQw) on joystick mouse movement emulation
+* [Configuration](docs/configuration.md) options
 
 ## Battery life
 Estimated battery life (in months)
@@ -77,24 +46,18 @@ Estimated battery life (in months)
 *Note* Qty is for one board/side, for a complete set of keyboard multiply Qty by
 2 accordingly
 
-|Qty|Device            |Parts          |
-|---|------------------|---------------|
-|22 |Kailh Choc Socket |S1-S22         |
-|22 |Kailh Choc Switch |S1-S22         |
-|1  |MJTP1117          |S23            |
-|24 |DKS14             |D1-D24         |
-|1  |EC12E2440301\*    |ENC1/ENC2      |
-|1  |1825232-1         |SW1            |
-|1  |seeeduino_xiao_ble|U1             |
-|1  |PKCELL LP502535\* |Battery        |
+|Qty|Device                      |Parts          |
+|---|----------------------------|---------------|
+|22 |Switch Socket<sup>1</sup>   |S1-S22         |
+|22 |Switch<sup>1</sup>          |S1-S22         |
+|1  |MJTP1117                    |S23            |
+|24 |DKS14                       |D1-D24         |
+|1  |EC12E2440301<sup>2</sup>    |ENC1/ENC2      |
+|1  |THB001P                     |JOYSTICK       |
+|1  |1825232-1                   |SW1            |
+|1  |seeeduino_xiao_ble          |U1             |
+|1  |PKCELL LP502535<sup>3</sup> |Battery        |
 
-\* Depends on configuration options, different part can be chosen.
-
-## Future Work
-This project is a little rushed to make it in time for SeeedStudio Mechanical Keyboard Design
-Contest[(project
-post)](https://www.hackster.io/seanqinxiao/xobdox-a-40-ish-split-wireless-keyboard-f7e3a8)
-After I gerbered out I realized it shouldn't be too hard to
-make the switch footprint compatible for both Choc and MX switches, which would
-(hopefully) make this board more useful. Therefore I
-am updating the design. And when that's done I will post it here.
+<sup>1</sup> Compitable with Cherry MX or Kailh low profile sockets/switches
+<sup>2</sup> Use EC12 for low profile encoder, or EC11 for standard profile encoder
+<sup>3</sup> Depends on battery configuration options, different part can be chosen

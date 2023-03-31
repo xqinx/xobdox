@@ -1,4 +1,4 @@
-## Customize and Build
+## Customize and Build Firmware
 
 * Check out xobdox's zmk branch: https://github.com/xqinx/zmk/tree/xobdox
 * If you'd like to change any key mappings, modify the keymap file in
