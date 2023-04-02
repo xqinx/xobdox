@@ -4,7 +4,7 @@
 * If you'd like to change any key mappings, modify the keymap file in
   `app/boards/shields/xobdox/xobdox.keymap` according to zmk's key code
   [definitions](https://zmk.dev/docs/codes)
-* compile each side's firmware seperately
+* compile each side's firmware separately
   you might need to setup your build environment following instructions
   [here](https://zmk.dev/docs/development/setup)
   ```shell
@@ -24,7 +24,7 @@
 ## Flash
 * connect either side of the keyboard to your host machine using a USB-C cable
 * double press the reset button on XIAO ble board. See
-  [referece](https://wiki.seeedstudio.com/XIAO_BLE/)
+  [reference](https://wiki.seeedstudio.com/XIAO_BLE/)
 * you should see a USB mass storage device show up after double pressing, that
   means the board now is in its bootloader and can be flashed over USB
 * drag and drop the compiled firmware (xobdox_left.uf2 or xobdox_right.uf2

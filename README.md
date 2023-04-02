@@ -58,6 +58,6 @@ Estimated battery life (in months)
 |1  |seeeduino_xiao_ble          |U1             |
 |1  |PKCELL LP502535<sup>3</sup> |Battery        |
 
-<sup>1</sup> Compitable with Cherry MX or Kailh low profile sockets/switches
-<sup>2</sup> Use EC12 for low profile encoder, or EC11 for standard profile encoder
+<sup>1</sup> Compatible with Cherry MX or Kailh low profile sockets/switches \
+<sup>2</sup> Use EC12 for low profile encoder, or EC11 for standard profile encoder \
 <sup>3</sup> Depends on battery configuration options, different part can be chosen
